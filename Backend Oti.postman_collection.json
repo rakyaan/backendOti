@@ -8,16 +8,46 @@
 		{
 			"name": "Register User",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"\",\n\t\"password\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Register a new user."
 			},
 			"response": []
 		},
 		{
 			"name": "Login User",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"\",\n\t\"password\": \"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login with username and password."
 			},
 			"response": []
 		},
@@ -25,31 +55,80 @@
 			"name": "Get Events",
 			"request": {
 				"method": "GET",
-				"header": []
+				"url": {
+					"raw": "http://localhost:3000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					]
+				},
+				"description": "Get all events."
 			},
 			"response": []
 		},
 		{
 			"name": "Register Event",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"url": {
+					"raw": "http://localhost:3000/events/:eventId/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						":eventId",
+						"register"
+					]
+				},
+				"description": "Register for an event by providing eventId in the URL."
 			},
 			"response": []
 		},
 		{
 			"name": "Cancel Registration",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"url": {
+					"raw": "http://localhost:3000/events/:eventId/cancel/:registrationId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						":eventId",
+						"cancel",
+						":registrationId"
+					]
+				},
+				"description": "Cancel registration for an event by providing eventId and registrationId in the URL."
 			},
 			"response": []
 		},
 		{
 			"name": "Logout User",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"url": {
+					"raw": "http://localhost:3000/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logout"
+					]
+				},
+				"description": "Logout the user."
 			},
 			"response": []
 		}
